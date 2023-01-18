@@ -22,7 +22,7 @@ function App() {
           <ReactSwitch onChange={toggleTheme} checked={theme === "dark"} />
         </div>
         <div className="container mt-5 pb-5">
-          <TextForm heading="Enter your text below to convert into Uppercase: " />
+          <TextForm heading="Enter your text below: " />
         </div>
       </div>
     </ThemeContext.Provider>
