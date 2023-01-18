@@ -1,19 +1,31 @@
 import "./App.css";
 import Navbar from "./components/Navbar";
 import TextForm from "./components/TextForm";
-import DarkLightMode from "./components/DarkLightMode";
+import { createContext } from "react";
+import React, { useState } from "react";
+import ReactSwitch from "react-switch";
+
+export const ThemeContext = createContext(null);
 
 function App() {
+  const [theme, setTheme] = useState("light");
+
+  const toggleTheme = () => {
+    setTheme((curr) => (curr === "light" ? "dark" : "light"));
+  };
+
   return (
-    <>
-      <div className="d-flex justify-content-sm-between align-items-center px-3">
-        <Navbar title="TextUtilizer" />
-        <DarkLightMode />
+    <ThemeContext.Provider value={{ theme, toggleTheme }}>
+      <div id={theme}>
+        <div className="d-flex justify-content-sm-between align-items-center px-3 switch">
+          <Navbar title="TextUtilizer" />
+          <ReactSwitch onChange={toggleTheme} checked={theme === "dark"} />
+        </div>
+        <div className="container mt-5 pb-5">
+          <TextForm heading="Enter your text below to convert into Uppercase: " />
+        </div>
       </div>
-      <div className="container mt-5">
-        <TextForm heading="Enter your text below to convert into Uppercase: " />
-      </div>
-    </>
+    </ThemeContext.Provider>
   );
 }
 
