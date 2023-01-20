@@ -19,7 +19,11 @@ function App() {
       <div id={theme}>
         <div className="d-flex justify-content-sm-between align-items-center px-3 switch">
           <Navbar title="TextUtilizer" />
-          <ReactSwitch onChange={toggleTheme} checked={theme === "dark"} />
+          <ReactSwitch
+            onChange={toggleTheme}
+            checked={theme === "dark"}
+            aria-label="Switch to dark mode"
+          />
         </div>
         <div className="container mt-5 pb-5">
           <TextForm heading="Enter your text below: " />

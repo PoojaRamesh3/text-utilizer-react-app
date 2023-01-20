@@ -49,8 +49,8 @@ export default function TextForm(props) {
       <div className="mt-5 container last-main">
         <h1>Summary</h1>
         <p>
-          0{text?.split(" ").length} words containing 0{text?.length} characters
-          converted into Uppercase Successfully!
+          0{text?.split(" ").length} words containing 0{text?.length}{" "}
+          characters!
         </p>
       </div>
     </>
