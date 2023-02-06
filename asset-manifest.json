@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/text-utilizer-react-app/static/css/main.f893c835.css",
+    "main.js": "/text-utilizer-react-app/static/js/main.a4f8d2d0.js",
+    "static/media/logo.png": "/text-utilizer-react-app/static/media/logo.8412c5803a7e7f53f24a.png",
+    "index.html": "/text-utilizer-react-app/index.html",
+    "main.f893c835.css.map": "/text-utilizer-react-app/static/css/main.f893c835.css.map",
+    "main.a4f8d2d0.js.map": "/text-utilizer-react-app/static/js/main.a4f8d2d0.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f893c835.css",
+    "static/js/main.a4f8d2d0.js"
+  ]
+}
